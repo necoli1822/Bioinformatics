@@ -1,0 +1,11 @@
+#!/bin/bash
+
+doi=$1
+pdf_link=$(wget -O- -q https://sci-hub.se/${doi} | grep -e "<iframe src = \"//sci-hub.se/downloads/.*" | sed 's/.*\(\/\/sci-hub.*id \= \).*/http:\1/g' | sed 's/\ id.*//g' | sed 's/#.*//g')
+
+if [[ ${pdf_link} = "" ]]; then
+	echo "No results found"
+else
+	echo "Downloading pdf..."
+	wget -q ${pdf_link}
+fi
