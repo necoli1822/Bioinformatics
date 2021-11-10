@@ -1,6 +1,0 @@
-#!/bin/bash
-
-time=$(date '+%y%m%d')
-ncbi_path="/home/avian-flu/Desktop/AIV_databases/ncbi_database"
-
-mkdir $ncbi_path/$time
