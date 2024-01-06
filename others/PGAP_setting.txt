@@ -1,0 +1,4 @@
+When running PGAP ends with permission error or disk type error, run
+```
+chmod -R a+rw .
+```
