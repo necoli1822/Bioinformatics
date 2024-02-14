@@ -1,0 +1,1 @@
+Effective length (“eff_length”) is gene length minus insert size.
